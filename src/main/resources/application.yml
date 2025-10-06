@@ -1,0 +1,32 @@
+# C?u hình c?ng server
+server:
+  port: 8080
+
+# C?u hình thông tin k?t n?i ??n Auth0
+auth0:
+  domain: dev-j3uq1ngh5mrxhdrr.us.auth0.com
+
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          auth0:
+            client-id: RgKhW1zHWefbqLhfuNPRUxAxNIsAmiMT
+            client-secret: X3QtUPhQZkQr8H8Q6re_Y5F_ePxG3vLtqM5AJD5jO-RNp9coZuoshuVaQ2K6nMJC
+            scope:
+              - openid
+              - profile
+              - email
+              - offline_access # Scope quan tr?ng ?? yêu c?u Refresh Token
+            client-name: Auth0
+            authorization-grant-type: authorization_code
+            redirect-uri: "{baseUrl}/login/oauth2/code/{registrationId}"
+        provider:
+          auth0:
+            # Issuer URI s? ???c t? ??ng c?u hình b?i Spring d?a vào domain
+            issuer-uri: https://${auth0.domain}/
+
+  # C?u hình Thymeleaf (không b?t bu?c nh?ng giúp g? l?i)
+  thymeleaf:
+    cache: false
