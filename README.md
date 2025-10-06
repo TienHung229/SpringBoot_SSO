@@ -17,9 +17,17 @@ Hệ thống sử dụng giao thức **OpenID Connect (OIDC)** để xác thực
 - Người dùng được chuyển hướng đến trang đăng nhập của **Auth0** để xác thực.  
 - Sau khi đăng nhập thành công, **Auth0** trả về thông tin người dùng cho ứng dụng một cách an toàn.
 
+<img width="1341" height="536" alt="image" src="https://github.com/user-attachments/assets/e671014a-03c6-45ad-b588-c808b76e0481" />
+
+<img width="630" height="815" alt="image" src="https://github.com/user-attachments/assets/acb47312-c830-415b-aca0-fb77d9feb390" />
+
+
 ### 🧰 Bảo mật với Spring Security & OIDC
 - Sử dụng **Spring Security** và **spring-boot-starter-oauth2-client** để cấu hình luồng OIDC tự động.  
 - **ID Token** nhận từ Auth0 chứa thông tin (claims) của người dùng đã được xác thực.
+
+  <img width="923" height="518" alt="image" src="https://github.com/user-attachments/assets/4941e3ca-9fe9-4062-bbbf-4085457ef5f6" />
+
 
 ### 👥 Phân quyền truy cập
 | Đường dẫn | Mô tả | Quyền truy cập |
